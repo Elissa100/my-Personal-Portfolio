@@ -104,8 +104,3 @@ body{
 input{
   font-family: 'Yatra One', cursive;
 }
-@media screen and (min-width: 1024px) {
-.n-button{
- display: none;
-}
-}
