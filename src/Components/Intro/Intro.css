@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Lexend&family=Poppins:wght@300&display=swap');
+
+.names{
+    font-size: 3em;
+    font-weight: 700;
+    color: blue;
+    font-family: 'Lexend', sans-serif;
+
+}
+span{
+    margin-top: 20px;
+}
+
+.greet{
+    color: blue;
+    font-size: 1.6em;
+}
+
+.i-left{
+display: flex;
+position: relative;
+flex: 1;
+flex-direction: column;
+gap: 2rem;
+    }
+
+
+.i-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.i-right{
+    flex: 1;
+}
+.i-name>:nth-child(1){
+    color: var(--black);
+    font-weight: bold;
+    font-size: 3rem;
+}
+.i-name>:nth-child(3){
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.Intro{
+    display: flex;
+    height: 77vh;
+    margin-top: 6rem;
+}
+.i-button{
+    width: 6rem;
+    height: 4rem;
+    margin-top: 15px;
+}
+img{
+    width: 80px;
+    height: 80px;
+}
+.i-icons{
+display: flex;
+margin-top: 3rem;
+gap: 3rem;
+}
+.i-icons>*:hover{
+cursor: pointer;
+}
+
+.i-right{
+    flex: 1;
+    position: relative;
+
+}
+.i-right>*{
+    position: absolute;
+    z-index: 1;
+}
+
+.i-right>:nth-child(1){
+    transform: scale(0.69);
+    left: -15%;
+    top: -9%;
+} 
+.i-right>:nth-child(2){
+    top: -4.6rem;
+    transform: scale(0.67);
+    left: -3rem;
+    }
+.i-right>:nth-child(3){
+ transform: scale(1.4);
+ left: 20%;
+ top: 10%;
+
+ border: none;
+ border-top-left-radius: 40px;
+ border-bottom-right-radius: 40px;
+ 
+ }
+#vector{
+    width: 500px;
+    height: 500px;
+}
+
+#me{
+    width: 100px;
+    height: 120px;
+    
+}
+
+.i-right>:nth-child(4){
+transform: scale(0.2);
+top: -49%;
+border-radius: 50%;
+padding: 0;
+left: -14em;
+
+
+}
+.blur{
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    filter: blur(212px);
+    z-index: -9;
+    top: -18px;
+    left: 56%;
+    filter: blur(72px);
+
+}
+
+#blur{
+    background: #c1f5ff;
+    top: 17rem;
+    width: 21rem;
+    left: -9rem;
+    height: 11rem;
+}
+
+.span1{
+    font-family: 'Comic Neue', cursive;
+}
+
+@media screen and (max-width:480px) {
+    .Intro{
+     flex-direction: column;
+     height: 64rem;
+    }
+    .i-right{
+        transform: scale(0.8);
+        left: -3rem;
+        gap: 7rem;
+    }
+    .i-right .blur{
+        display: none;
+    }
+    .floating-div:nth-of-type(1){
+       top: -7rem !important;
+    }
+}

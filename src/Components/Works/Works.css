@@ -1,0 +1,119 @@
+.works {
+    padding: 0.3rem 0.3rem;
+    display: flex;
+    height: 90vh;
+    margin-top: 4rem;
+  }
+  
+  .w-right {
+    position: relative;
+  }
+  
+  .w-mainCircle {
+    left: 9rem;
+    position: relative;
+    width: 18rem;
+    height: 18em;
+    border-radius: 100%;
+    box-shadow: var(--boxShadow);
+    top: 2rem;
+    background: white;
+  }
+  
+  .w-mainCircle > * {
+    position: absolute;
+  }
+  
+  .w-mainCircle > :nth-child(1) {
+    top: -3rem;
+    left: 6rem;
+  }
+  
+  .w-mainCircle > :nth-child(2) {
+    top: 5rem;
+    left: -3rem;
+  }
+  
+  .w-mainCircle > :nth-child(3) {
+    top: 5rem;
+    left: 6rem;
+  }
+  
+  .w-mainCircle > :nth-child(4) {
+    top: 5rem;
+    left: 15rem;
+  }
+  
+  .w-mainCircle > :nth-child(5) {
+    top: 15rem;
+    left: 7rem;
+  }
+  
+  .w-secCircle {
+    width: 6rem;
+    height: 6rem;
+    background: none;
+    position: absolute;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 5px solid #ebebeb;
+    background: white;
+  }
+  
+  .w-secCircle > img {
+    transform: scale(0.8);
+  }
+  
+  .w-backCircle {
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border-radius: 100%;
+    z-index: -1;
+  }
+  
+  .blueCircle {
+    top: 0rem;
+    left: 18rem;
+    background: blue;
+  }
+  
+  .yellowCircle {
+    top: 8rem;
+    left: 18rem;
+    background: hsl(46, 100%, 50%);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .works {
+      flex-direction: column;
+      height: auto;
+      gap: 2rem;
+      padding: 0;
+    }
+  
+    .w-right {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      transform: scale(0.7);
+    }
+  
+    .w-mainCircle {
+      position: static;
+      left: 8rem !important;
+    }
+  }
+  
+  @media screen and (max-width: 478px) {
+    .works {
+      height: auto;
+    }
+  
+    .w-mainCircle {
+      left: 2rem;
+    }
+  }
+  

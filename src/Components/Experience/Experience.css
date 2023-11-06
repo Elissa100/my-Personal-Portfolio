@@ -1,0 +1,79 @@
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: auto;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+
+.achievement {
+  flex: 1;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.circle {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2em;
+  border-radius: 100%;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.circle::before {
+  border-radius: 100%;
+  content: '';
+  background-image: linear-gradient(to bottom, #87e6fb 0%, #ffc309);
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  top: -4px;
+  position: absolute;
+  z-index: -1;
+  box-shadow: var(--boxShadow);
+}
+
+.achievement span:nth-of-type(1) {
+  color: blue;
+}
+
+.achievement span:nth-of-type(2) {
+  color: orange;
+}
+
+@media screen and (max-width: 767px) {
+  .circle {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-width: 1023px) {
+  .circle {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-width: 1279px) {
+  .circle {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2em;
+  }
+}
+

@@ -1,0 +1,28 @@
+.floatingdiv{
+    justify-content: space-around;
+    display: flex;
+    background: rgb(250, 250, 250);
+    border-radius: 17px;
+    padding: 0px 28px 0px 0px;
+    height: 4rem;
+    align-items: center;
+    box-shadow: var(--boxShadow);
+    padding-bottom: 10px;
+}
+.floatingdiv>img{
+    transform: scale(.65);
+    
+}
+.floatingdiv>span{
+    font-size: 16px;
+}
+.floating-div{
+    top: -4%;
+    left: 40%;
+}
+.blur{
+    background: rgb(145, 132, 154);
+}
+span{
+    color: rgb(0, 3, 3);
+}

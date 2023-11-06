@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  align-items: center;
+  margin: -0.5rem -3.5rem;
+  position: relative;
+  margin-top: -7rem;
+}
+
+.f-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 4rem;
+  gap: 5rem;
+  color: rgb(5, 8, 0);
+}
+
+.f-icons {
+  display: flex;
+  gap: 4rem;
+}
+
+/* New styles for the phone icon and number */
+.phone-container {
+  position: relative;
+  display: inline-block;
+}
+
+.phone-number {
+  position: absolute;
+  top: -104px;
+  font-size: 2rem;
+  left: 120%;
+  color: blue;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.phone-container:hover .phone-number {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .f-content {
+    transform: scale(.5);
+  }
+}
+
+.wave {
+  height: 40vh;
+}

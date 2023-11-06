@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Croissant+One&family=Gabarito&family=Lexend&family=Quicksand&family=Yatra+One&display=swap');
+:root
+{
+  --yellow: #F5C32C;
+    --orange : #FCA61F;
+    --black : #242D49;
+    --gray : #788097;
+    --blueCard : #DDF8FE;
+    --purple: rgb(238 210 255);
+    --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --orangeCard: rgba(252, 166, 31, 0.45);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+.App{
+    padding: 0.5rem 3.5rem;
+    overflow: hidden;
+    color: var(--black);   
+    font-family: 'Poppins', sans-serif; 
+    
+}
+
+*{
+  font-weight: normal;
+  font-size: 20px;
+}
+body{
+  margin: 0;
+}
+
+.button{
+  border-radius: 15px;
+  width: 150px;
+  margin-bottom: 30px;
+  height: 6vh;
+  border: none;
+  background-color: var(--orange);
+}
+.button:hover{
+  background-color: var(--black);
+  color: white;
+  cursor: pointer;
+}
+.i-button:hover{
+  background-color: rgb(231, 218, 218);
+  color: rgb(4, 79, 129);
+  border: 1px solid yellow ;
+}
+
+#light{
+  background-color: white;
+}
+#dark{
+  background-color: rgb(8, 0, 0);
+} 
+
+/* Default styles for larger screens */
+.App {
+  padding: 0.5rem 3.5rem;
+}
+/* Default styles for larger screens (desktops and laptops) */
+.App {
+  padding: 0.5rem 3.5rem;
+}
+
+/* Smaller laptops and desktops */
+@media screen and (max-width: 1366px) {
+  .App {
+    padding: 0.5rem 2.5rem;
+  }
+}
+
+/* Medium-sized laptops */
+@media screen and (max-width: 1024px) {
+  .App {
+    padding: 0.5rem 2rem;
+  }
+}
+
+/* Smaller laptops and tablets */
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* Small tablets and large phones */
+@media screen and (max-width: 576px) {
+  .App {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 0.5rem 0.5rem;
+  }
+  .n-button{
+    display: none;
+  }
+}
+input{
+  font-family: 'Yatra One', cursive;
+}
+@media screen and (min-width: 1024px) {
+.n-button{
+ display: none;
+}
+}
