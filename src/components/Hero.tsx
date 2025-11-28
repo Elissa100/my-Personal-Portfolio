@@ -24,31 +24,18 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="absolute inset-0 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-300 pt-20">
+      {/* Background blobs - adjusted opacity for light mode */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
+          className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 rounded-full blur-3xl"
+          animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <motion.div
-          className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear"
-          }}
+          className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/20 dark:to-blue-500/20 rounded-full blur-3xl"
+          animate={{ x: [0, -100, 0], y: [0, -50, 0] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         />
       </div>
 
@@ -64,7 +51,7 @@ export default function Hero() {
             <img
               src="/profile-main.jpg"
               alt="Elissa SIBOMANA"
-              className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-500 shadow-2xl"
+              className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white dark:border-cyan-500 shadow-2xl"
             />
           </motion.div>
 
@@ -74,7 +61,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="mb-4"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full text-green-400 text-sm font-medium backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-500/20 border border-green-200 dark:border-green-500/50 rounded-full text-green-700 dark:text-green-400 text-sm font-medium backdrop-blur-sm">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               Available for Opportunities
             </span>
@@ -84,16 +71,16 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4"
           >
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Elissa SIBOMANA</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400">Elissa SIBOMANA</span>
           </motion.h1>
 
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-6 h-10"
+            className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6 h-10"
           >
             <span>I'm </span>
             <motion.span
@@ -101,7 +88,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-semibold"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 font-semibold"
             >
               {roles[roleIndex]}
             </motion.span>
@@ -111,7 +98,7 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl"
+            className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
           >
             Building Scalable Backend, Frontend & Mobile Solutions
           </motion.p>
@@ -131,7 +118,7 @@ export default function Hero() {
             </button>
             <a
               href="#contact"
-              className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
+              className="px-6 py-3 bg-white/80 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white border border-gray-200 dark:border-white/20 rounded-lg font-medium hover:bg-white dark:hover:bg-white/20 shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
               Download CV
@@ -144,26 +131,21 @@ export default function Hero() {
             transition={{ delay: 0.7 }}
             className="flex gap-4"
           >
-            <a
-              href="https://github.com/Elissa100"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 hover:scale-110 transition-all duration-300"
-            >
-              <Github className="w-5 h-5 text-white" />
-            </a>
-            <a
-              href="#instagram"
-              className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 hover:scale-110 transition-all duration-300"
-            >
-              <Instagram className="w-5 h-5 text-white" />
-            </a>
-            <a
-              href="#telegram"
-              className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 hover:scale-110 transition-all duration-300"
-            >
-              <Send className="w-5 h-5 text-white" />
-            </a>
+            {[
+              { Icon: Github, href: "https://github.com/Elissa100" },
+              { Icon: Instagram, href: "https://www.instagram.com/e_sibo_08/" },
+              { Icon: Send, href: "https://t.me/+250796146694" }
+            ].map(({ Icon, href }, i) => (
+              <a
+                key={i}
+                href={href}
+                target={href.startsWith('http') ? "_blank" : undefined}
+                rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
+                className="w-12 h-12 flex items-center justify-center bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200 dark:border-white/20 rounded-full hover:bg-white dark:hover:bg-white/20 hover:scale-110 shadow-sm transition-all duration-300 group"
+              >
+                <Icon className="w-5 h-5 text-gray-700 dark:text-white group-hover:text-blue-500 dark:group-hover:text-white" />
+              </a>
+            ))}
           </motion.div>
         </div>
       </div>
