@@ -25,7 +25,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-300 pt-20">
-      {/* Background blobs - adjusted opacity for light mode */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 rounded-full blur-3xl"
@@ -117,7 +116,8 @@ export default function Hero() {
               <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
             </button>
             <a
-              href="#contact"
+              href="/Elissa_Sibomana_CV.pdf"
+              download="Elissa_Sibomana_CV.pdf"
               className="px-6 py-3 bg-white/80 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white border border-gray-200 dark:border-white/20 rounded-lg font-medium hover:bg-white dark:hover:bg-white/20 shadow-sm transition-all duration-300 flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
