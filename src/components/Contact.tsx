@@ -154,10 +154,14 @@ export default function Contact() {
                   <SiWhatsapp className="w-5 h-5" />
                   Chat on WhatsApp
                 </a>
-                <button className="px-6 py-3 bg-white dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white border border-gray-200 dark:border-white/20 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm dark:shadow-none">
+                <a
+                  href="/Elissa_Sibomana_CV.pdf"
+                  download="Elissa_Sibomana_CV.pdf"
+                  className="px-6 py-3 bg-white dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white border border-gray-200 dark:border-white/20 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm dark:shadow-none"
+                >
                   <Download className="w-5 h-5" />
                   Download CV
-                </button>
+                </a>
               </div>
             </motion.div>
           </div>
