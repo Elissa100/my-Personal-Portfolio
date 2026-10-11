@@ -5,7 +5,7 @@ const experiences = [
   {
     role: 'Full-Stack Developer',
     company: 'FIKA',
-    period: 'June 2026 – Present',
+    period: 'June 2026 to Present',
     location: 'Kigali, Rwanda',
     summary: 'Joined as a frontend developer and grew into full-stack work, contributing to production features across the logistics platform.',
     contributions: [
@@ -18,7 +18,7 @@ const experiences = [
   {
     role: 'Project-Based Full-Stack Developer',
     company: 'Construct KVV',
-    period: 'January 2026 – July 2026',
+    period: 'January 2026 to July 2026',
     location: 'Kigali, Rwanda',
     summary: 'Contributed across the web, mobile, and backend applications for a construction marketplace.',
     contributions: [
@@ -31,7 +31,7 @@ const experiences = [
   {
     role: 'Software Development Intern',
     company: 'InTouch Communications',
-    period: 'February 2026 – June 2026',
+    period: 'February 2026 to June 2026',
     location: 'Kigali, Rwanda',
     summary: 'Improved the client-facing portal of InTouchSMS, an SMS campaign management platform.',
     contributions: [

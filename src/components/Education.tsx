@@ -12,7 +12,7 @@ export default function Education() {
           <h2>Rwanda Coding Academy</h2>
           <p>Software Programming &amp; Embedded Systems</p>
         </div>
-        <span className="education-period">October 2022 – July 2025</span>
+        <span className="education-period">October 2022 to July 2025</span>
       </div>
     </section>
   );

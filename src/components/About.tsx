@@ -15,7 +15,7 @@ export default function About() {
             frontend experiences, and I also work on the APIs, data, and business logic behind them.
           </p>
           <p>
-            I&apos;ve contributed to products in communications, logistics, and construction—from
+            I&apos;ve contributed to products in communications, logistics, and construction, from
             modernizing an existing SMS platform to building features across web, mobile, and backend
             services. I enjoy understanding how a system already works, then making it more useful.
           </p>

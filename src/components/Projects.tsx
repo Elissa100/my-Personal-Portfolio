@@ -30,7 +30,7 @@ export default function Projects() {
               <div><span>02</span><span>Contacts</span><span>Groups &amp; audiences</span></div>
               <div><span>03</span><span>Scheduling</span><span>Plan &amp; review</span></div>
             </div>
-            <p className="visual-disclaimer">Workflow overview — not a product screenshot</p>
+            <p className="visual-disclaimer">Workflow overview, not a product screenshot</p>
           </div>
 
           <div className="featured-project-copy">
