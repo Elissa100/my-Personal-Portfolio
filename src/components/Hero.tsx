@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Download, Github } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, ExternalLink, Github } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -13,8 +13,13 @@ export default function Hero() {
             <a href="#projects" className="button-primary">
               View my work <ArrowDown size={16} aria-hidden="true" />
             </a>
-            <a href="/Elissa_Sibomana_CV.pdf" download="Elissa_Sibomana_CV.pdf" className="button-secondary">
-              <Download size={16} aria-hidden="true" /> Download CV
+            <a
+              href="/Elissa_Sibomana_CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="button-secondary"
+            >
+              <ExternalLink size={16} aria-hidden="true" /> View CV
             </a>
           </div>
           <div className="hero-socials" aria-label="Social links">
