@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, ExternalLink, Github } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, ExternalLink, Github, Linkedin } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -25,6 +25,9 @@ export default function Hero() {
           <div className="hero-socials" aria-label="Social links">
             <a href="https://github.com/Elissa100" target="_blank" rel="noreferrer" aria-label="GitHub profile">
               <Github size={17} aria-hidden="true" /><span>GitHub</span><ArrowUpRight size={13} aria-hidden="true" />
+            </a>
+            <a href="https://www.linkedin.com/in/elissa-sibomana-1888b8413" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+              <Linkedin size={17} aria-hidden="true" /><span>LinkedIn</span><ArrowUpRight size={13} aria-hidden="true" />
             </a>
             <a href="mailto:sibomanaelissa71@gmail.com" aria-label="Email Elissa">
               <span className="social-email-mark" aria-hidden="true">@</span><span>Email</span><ArrowUpRight size={13} aria-hidden="true" />

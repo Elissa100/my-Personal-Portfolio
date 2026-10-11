@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import SectionIntro from './SectionIntro';
 import ContactForm from './ContactForm';
 
@@ -30,6 +30,16 @@ export default function Contact() {
             <a href="https://github.com/Elissa100" target="_blank" rel="noreferrer" className="contact-item">
               <Github size={18} aria-hidden="true" />
               <span>github.com/Elissa100</span>
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/elissa-sibomana-1888b8413"
+              target="_blank"
+              rel="noreferrer"
+              className="contact-item"
+            >
+              <Linkedin size={18} aria-hidden="true" />
+              <span>LinkedIn profile</span>
               <ArrowUpRight size={15} aria-hidden="true" />
             </a>
             <div className="contact-item contact-location">
