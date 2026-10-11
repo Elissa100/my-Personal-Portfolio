@@ -24,6 +24,28 @@ function cleanText(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
+function safeProviderMessage(value) {
+  return cleanText(value)
+    .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, '[email]')
+    .slice(0, 500);
+}
+
+function providerFailureMessage(status, providerMessage) {
+  if (status === 401 || status === 403) {
+    return 'Brevo rejected its API key. Check that BREVO_API_KEY in Netlify contains a valid Brevo API key, then redeploy.';
+  }
+
+  if (status === 400 && /sender|verified|verification|from address/i.test(providerMessage)) {
+    return `Brevo rejected the sender address. Verify ${senderEmail} as a transactional sender in Brevo, then try again.`;
+  }
+
+  if (status === 429) {
+    return 'Brevo is receiving too many requests right now. Please wait a little and try again.';
+  }
+
+  return 'Brevo could not send this message. Check the Netlify function logs for the provider error, or email me directly.';
+}
+
 export default async function handler(request) {
   if (request.method !== 'POST') {
     return jsonResponse(405, { error: 'Use the form to send a message.' });
@@ -110,8 +132,24 @@ export default async function handler(request) {
   }
 
   if (!brevoResponse.ok) {
-    console.error(`Brevo rejected the contact message with status ${brevoResponse.status}.`);
-    return jsonResponse(502, { error: 'Your message could not be sent right now. Please email me directly.' });
+    let providerMessage = '';
+    let providerCode = '';
+    try {
+      const providerError = await brevoResponse.json();
+      providerMessage = safeProviderMessage(providerError?.message);
+      providerCode = cleanText(providerError?.code).slice(0, 100);
+    } catch {
+      providerMessage = 'Brevo returned a non-JSON error response.';
+    }
+
+    console.error('Brevo rejected the contact message:', JSON.stringify({
+      status: brevoResponse.status,
+      code: providerCode || undefined,
+      message: providerMessage,
+    }));
+    return jsonResponse(502, {
+      error: providerFailureMessage(brevoResponse.status, providerMessage),
+    });
   }
 
   return jsonResponse(200, { ok: true });
