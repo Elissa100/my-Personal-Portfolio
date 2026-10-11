@@ -39,10 +39,10 @@ export default function Hero() {
           <div className="portrait-caption"><span>ELISSA SIBOMANA</span><span>SOFTWARE DEVELOPER</span></div>
           <img
             className="hero-portrait"
-            src="/profile-main.jpg"
+            src="/elissa-portrait.jpeg"
             alt="Portrait of Elissa Sibomana"
-            width="600"
-            height="720"
+            width="540"
+            height="960"
             fetchPriority="high"
           />
           <span className="portrait-index" aria-hidden="true">KIGALI / RWANDA</span>
